@@ -1,6 +1,0 @@
-# dotenv environment variables file to store API key
-.env
-
-# cache for the external modules/dependencies
-node_modules
-
