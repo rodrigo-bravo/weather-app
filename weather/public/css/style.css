@@ -1,0 +1,97 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:300';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css';
+
+
+body {
+    width: auto;
+    height: auto;
+    margin:  0 auto;
+    font-family: "Open Sans", sans-serif;
+    background-image: url("Images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+
+  
+  .container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  
+  /* This will format the whole fieldset content*/ 
+  fieldset {
+    display: block;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0em;
+    -webkit-padding-start: 0em;
+    -webkit-padding-end: 0em;
+    -webkit-padding-after: 0em;
+    border: 0px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    min-width: -webkit-min-content;
+    padding: 30px;
+  }
+  
+  /* Format the input, paragraph, hover effect, focus and button */
+  .ghost-input,
+  p {
+    display: block;
+    font-weight: 300;
+    width: 100%;
+    font-size: 25px;
+    border: 0px;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #ffffff;
+    background: transparent;
+    font-family: Open Sans, Verdana;
+    padding: 25px 15px;
+    margin: 20px 0px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .ghost-input:focus {
+    border-bottom: 1px solid rgb(189, 233, 88);
+  }
+  
+  .ghost-button {
+    background-color: transparent;
+    opacity: 0.8;
+    border: 2px solid rgb(127, 126, 131);
+    color:rgb(255, 255, 255);
+    padding: 10px 30px;
+    width: 100%;
+    min-width: 350px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .ghost-button:hover {
+    border: 2px solid #e7e689;
+  }
+  
+  p {
+    color: rgb(212, 135, 72);
+  }
+
+  /* Modify content within card deck */
+  .card-text{
+    background-color: rgb(212, 135, 72);
+    color:rgb(255, 255, 255)
+  }

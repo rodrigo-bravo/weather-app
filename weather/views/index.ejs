@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/office/16/000000/sunset--v2.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+ </head>
+ 
+ <body>
+    <div class="container">
+        <fieldset>
+            <form action="/" method="post">
+                <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+                <input type="submit" class="ghost-button" value="Get Weather">
+            </form>
+
+            <!-- Display data if available -->
+            <%if( weather !== null){ %>
+                <div class="grid">
+                    <p style="font-weight: bold">
+                        <%= place %>
+                    </p>
+                    <p class="text small" style=" color: white">
+                        <%= timezone %>
+                    </p>
+                </div>
+            
+            <!-- Find other data fetched by the app on the console in JSON form and display it -->
+            <!-- Utilitze Bootstrap cards/grid -->    
+            <div class="card-deck">
+            <div class="card card-acTomorrowcent-dark mb-0">
+                <div class="card-header">Description</div>
+                <div class="card-body text-dark" style="background-color: rgb(212, 135, 72);">
+                    <h5 class="card-title">Overall Description: </h5>
+                        <p class="card-text">
+                            <%= description.charAt(0).toUpperCase() + description.slice(1); %>
+                        </p>
+                    <h5 class="card-title">Cloud coverage: </h5>
+                        <p class="card-text">
+                            <%= clouds %>%
+                        </p>
+                    <h5 class="card-title">Visibility: </h5>
+                        <p class="card-text">
+                            <%= visibility.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") %> meters
+                        </p>
+                </div>
+            </div>
+            <div class="card card-accent-dark mb-0" >
+                <div class="card-header">Summary</div>
+                    <div class="card-body text-dark" style="background-color: rgb(212, 135, 72);">
+                        <img src="<%= icon %>" alt="Weather-Icon" style="margin:auto">
+                        <h5 class="card-title" >Temperature</h5>
+                            <p class="card-text" >
+                                <%= temp %>°C 
+                                <%= fahrenheit %>°F
+                            </p>
+                        <h5 class="card-title">Main</h5>
+                            <p class="card-text" >
+                                <%= main %>
+                            </p>
+                    </div>
+            </div>
+            <div class="card card-accent-dark mb-0">
+                <div class="card-header">Outlook</div>
+                <div class="card-body text-dark" style="background-color: rgb(212, 135, 72);">
+                    <h5 class="card-title">Humidity: </h5>
+                        <p class="card-text">
+                            <%= humidity %> g.m<sup>-3</sup>
+                        </p>
+                        <h5 class="card-title">Wind Speed: </h5>
+                        <p class="card-text">
+                            <%= windSpeed %> m/s
+                        </p>
+                </div>
+                <div class="card-body text-dark" style="background-color: rgb(212, 135, 72);">
+                    <h5 class="card-title" >Pressure: </h5>
+                        <p class="card-text">
+                            <%= pressure.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") %> N·m<sup>−2</sup>
+                        </p>
+                </div>
+            </div>
+            </div>
+
+             <% } %>
+                <% if(error !== null){ %>
+                    <p>
+                        <%= error %>
+                    </p>
+            <% } %>
+
+        </fieldset>
+    </div>
+ </body>
+</html>
+ 
