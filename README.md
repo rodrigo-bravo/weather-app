@@ -1,48 +1,35 @@
 # Weather App
-Weather app in Node.js using OpenWeatherMap API.
+Weather app in Node.js that displays current weather data from any city using the OpenWeatherMap API.
 
-#Requirements
+![showcase](https://user-images.githubusercontent.com/89810908/149850177-55a81ae5-2509-4a3b-bb8a-7290ac118e21.PNG)
 
-    node v4.2.x
-    gulp version 3.9.x
-    tarifa version 0.16.x
+## Requirements
+```
+node v16.1.x
+```
 
-#Install all web app dependencies
-```cd project```
-npm install
+## Getting Started
+### Install all web app dependencies
+```
+cd weather
+npm install body-parser dotenv ejs express request
+```
+### Generate API Key
+Navigate to https://openweathermap.org/ and create an account/sign in. 
+Once logged in, generate an API key to access the public weather data.
+Navigate to the ``.env`` file and include the key
+```
+API_KEY = (API KEY HERE)
+```
+
+### Running the Project
+Navigate to the `weather` directory and run `main.js`. This can be paired
+with the nodemon tool via `npm install nodemon` to easily start the project with the command
+```
+npm start
+```
+
+## Contact Info
+rodrigoebravo@outlook.com
 
 
-iOS:
-
-    OS X and Xcode version 7.x
-
-Init project after checkout
-
-tarifa check --force
-
-This will recreate the cordova folder with android and iOS platforms and also install plugins.
-Install all web app dependencies
-
-cd project
-npm install
-
-Build android
-
-Build the native code using:
-
-ndk-build -C app/platforms/android
-
-Build the apk using:
-
-tarifa build android
-
-Build IOS
-
-Through XCode, in the build settings menu:
-
-    Set C++ Language Dialect option to C++11 value.
-    Set C++ Standard Library option to lib++ value.
-
-Finally, build the ios app using:
-
-tarifa build ios
