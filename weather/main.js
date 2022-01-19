@@ -31,7 +31,7 @@ app.post('/', function(req, res) {
         } else {
             let weather = JSON.parse(body)
 
-            //Gather fiels within API response if group of weather parameters (rain, snow, etc.) is valid
+            // Gather fiels within API response if group of weather parameters (rain, snow, etc.) is valid
             if (weather.main == undefined) {
                 res.render('index', { weather: null, error: 'Error, please try again' });
             } else {
@@ -48,7 +48,7 @@ app.post('/', function(req, res) {
                 weatherFahrenheit = +(Math.round(((weatherTemp * 9) / 5 + 32) + "e+2") + "e-2")
                 windSpeed = `${weather.wind.speed}`
 
-                //render the data to your page (index.ejs) before displaying it out
+                // Render the data to ejs file before displaying it out
                 res.render("index", {
                   weather: weather,
                   place: place,
