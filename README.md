@@ -1,7 +1,15 @@
 # Weather App
 Weather app in Node.js that displays current weather data from any city using the OpenWeatherMap API.
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/89810908/149850177-55a81ae5-2509-4a3b-bb8a-7290ac118e21.PNG" width="750"></img>
+</div>
+<br>
 
-![showcase](https://user-images.githubusercontent.com/89810908/149850177-55a81ae5-2509-4a3b-bb8a-7290ac118e21.PNG)
+- Node.js
+- Embedded JavaScript templates
+- Express
+- JavaScript
+
 
 ## Requirements
 ```
