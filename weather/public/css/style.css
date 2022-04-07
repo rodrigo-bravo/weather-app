@@ -4,7 +4,7 @@
 
 body {
     width: auto;
-    height: auto;
+    height: 100vh;
     margin:  0 auto;
     font-family: "Open Sans", sans-serif;
     background-image: url("Images/background.jpg");
@@ -12,15 +12,19 @@ body {
     background-repeat: no-repeat;
     background-size:cover;
   }
-
   
+  @media screen and (max-width: 712px) {
+    body {
+      height: 100%;
+    }
+  }
+
   .container {
     width: 100%;
     height: 100%;
     margin: 0 auto;
   }
   
-  /* This will format the whole fieldset content*/ 
   fieldset {
     display: block;
     -webkit-margin-start: 0px;
