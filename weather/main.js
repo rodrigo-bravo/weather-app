@@ -71,5 +71,5 @@ app.post('/', function(req, res) {
 
 // Listening on http://localhost:8080/
 app.listen(8080, function () {
-  console.log("Weather app listening on port 8080.");
+  console.log("Weather app listening on port 8080!");
 });
