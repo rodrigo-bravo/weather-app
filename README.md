@@ -25,7 +25,7 @@ npm install body-parser dotenv ejs express request
 ### Generate API Key
 Navigate to https://openweathermap.org/ and create an account/sign in. 
 Once logged in, generate an API key to access the public weather data.
-Navigate to the ``.env`` file and include the key
+Create an ``.env`` file and include the following:
 ```
 API_KEY = (API KEY HERE)
 ```
