@@ -6,7 +6,6 @@ Weather app in Node.js that displays current weather data from any city using th
 <br>
 
 - Node.js
-- Embedded JavaScript templates
 - Express
 - JavaScript
 
